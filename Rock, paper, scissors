@@ -1,0 +1,85 @@
+const getUserChoice = userInput => {
+  userInput = userInput.toLowerCase();
+  if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb') {
+    return userInput;
+  } else {
+     console.log('Error! Please enter valid input.');    
+  }
+}
+//Testing the function defined. 
+//console.log(getUserChoice('rock'));
+//Testing the function defined. 
+//console.log(getUserChoice('ropock'))
+
+function getComputerChoice() {
+   randomNumber = Math.floor(Math.random() * 3);
+   switch (randomNumber) {
+  case 0:
+    return 'rock';
+    break;
+  case 1:
+    return 'paper';
+    break;
+  case 2: 
+    return 'scissors';
+    break;
+  default :
+    return 'Error!';
+    break;    
+}
+}
+
+//Testing the function
+//console.log(getComputerChoice());
+
+function determineWinner(userChoice, computerChoice) {
+  if (userChoice === 'bomb'){
+    return console.log('You won!');
+  }  
+  if (userChoice === computerChoice){
+    return console.log('The game is a tie')
+  }
+  if (userChoice === 'rock') {
+    if (computerChoice === 'paper') {
+      return console.log('Computer Won!');
+    } else {
+      return console.log('You Won!');
+    }
+  }
+  if (userChoice === 'paper') {
+    if (computerChoice === 'rock') {
+      return console.log('You Won!');
+    } else {
+      return console.log('Computer Won!');
+    }
+  }
+  if (userChoice === 'scissors') {
+    if (computerChoice === 'paper') {
+      return console.log('You Won!');
+    } else {
+      return console.log('Computer Won!');
+    }
+  }
+}
+
+//Testing the function
+//console.log(determineWinner('rock', getComputerChoice()));
+
+function playGame() {
+  userChoice = getUserChoice('bomb');
+  console.log(`Your choice is: ${userChoice}.`);
+  computerChoice = getComputerChoice();
+  console.log(`Computer's choice is: ${computerChoice}.`);
+  console.log(determineWinner(userChoice, computerChoice));
+}
+
+//other way to define the function
+//const playGame = () => {
+   //const userChoice = getUserChoice('scissors');
+   //const computerChoice = getComputerChoice();
+   //console.log('You threw: ' + userChoice);
+   //console.log('The computer threw:' + computerChoice);
+   //console.log(determineWinner(userChoice, computerChoice));
+//};
+
+playGame();
