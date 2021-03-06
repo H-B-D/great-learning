@@ -1,0 +1,64 @@
+function getSleepHours(day) {
+  if (day === 'Monday') {
+    return 8;
+  } else if (day === 'Tuesday') {
+    return 7;
+  } else if (day === 'Wednesday') {
+    return 4;
+  } else if (day === 'Thrusday') {
+    return 7;
+  } else if (day === 'Friday') {
+    return 10;
+  } else if (day === 'Saturday') {
+    return 4;
+  } else {//if (day === Sunday)
+      return 3;
+  }
+}
+
+//Testing the function
+//console.log(getSleepHours('Sunday'));
+
+const getActualSleepHours = () =>{
+  d1 = getSleepHours('Monday');
+  d2 = getSleepHours('Tuesday');
+  d3 = getSleepHours('Wednesday');
+  d4 = getSleepHours('Thrusday');
+  d5 = getSleepHours('Friday');
+  d6 = getSleepHours('Saturday');
+  d7 = getSleepHours('Sunday');
+  return d1+d2+d3+d4+d5+d6+d7;
+}  
+
+//Function declaration using literal values.
+//const getActualSleepHours = () =>{
+ // 5 + 4 + 2 + 6 + 6 + 5 + 3; } 
+
+//Function declaration without parameter
+const getIdealSleepHours = () => {
+  let idealHours = 8;
+  return hours * 7;
+}
+
+//Function declaration using parameter.
+//const getIdealSleepHours = hours => hours * 7;
+//Testing the functions
+//console.log(getActualSleepHours());
+//console.log(getIdealSleepHours());
+
+const calculateSleepDebt = () => {
+  const actualSleepHours = getActualSleepHours();
+  const idealSleepHours = getIdealSleepHours();
+  if (actualSleepHours === idealSleepHours) {
+    console.log('You got ' + actualSleepHours + ' hour(s) sleep, the perfect amount of sleep needed this week!');
+  } else if (actualSleepHours >= idealSleepHours) {
+    console.log('You got ' + (actualSleepHours - idealSleepHours) + ' hour(s) more sleep than needed this week.');
+  } else {   
+    console.log('You got ' + (idealSleepHours - actualSleepHours) + ' hour(s) less amount of sleep needed this week. Get some rest.');  
+  }
+}
+
+calculateSleepDebt();
+
+#output
+#You got 6 hour(s) less amount of sleep needed this week. Get some rest.
