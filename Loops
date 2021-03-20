@@ -1,0 +1,52 @@
+let groceryList = ['orange juice', 'bananas', 'coffee beans', 'brown rice', 'pasta', 'coconut oil', 'plantains'];
+
+let itemPrice = [20.00, 15.00, 45.50, 79.99, 25.25, 35.00, 50.00];
+
+let previousList = ['orange juice', 'sauce', 'apples', 'cumin seeds', 'coffee beans', 'white rice', 'paper plates'];
+
+for (let i = 0; i < groceryList.length; i++) { 
+  if (groceryList[i] === 'pasta') {
+    console.log('Choose pasta of your favourite shape.');
+    break;
+  }
+   console.log(groceryList[i] + ' is added to the basket.');
+}
+
+for (let j = 0; j < groceryList.length; j++) {
+  for (let k = 0; k < previousList.length; k++) {
+    if (groceryList[j] === previousList[k]) {
+      console.log('No need to buy ' + previousList[k] + ' this time.');
+    }
+  } 
+}
+
+let sum = 0;
+ for (let n = 0; n < itemPrice.length; n++) {
+    sum = sum + itemPrice[n]; 
+}
+    let item = 0;
+    
+    do {       
+        
+      item++;
+      //console.log(item)
+    } while(item < groceryList.length)
+
+
+console.log('Total items bought : ' + item + '\nBilling amount is : ' + sum);
+
+//Output
+orange juice is added to the basket.
+bananas is added to the basket.
+coffee beans is added to the basket.
+brown rice is added to the basket.
+Choose pasta of your favourite shape.
+No need to buy orange juice this time.
+No need to buy coffee beans this time.
+Total items bought : 7
+Billing amount is : 270.74
+
+
+
+
+
