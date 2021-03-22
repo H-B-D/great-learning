@@ -1,0 +1,37 @@
+
+/* 
+    Created on : 13-Feb-2021, 04:39:53
+    Author     : H.B.D.
+*/
+.bigname {
+    font-family: Helvetica;
+    font-size: 100px;
+    font-weight: bold;
+    color: khaki;
+    text-align: center;
+    margin: auto;
+    background-image: url("pattern.jpeg");
+}
+.product {
+    font-family: Helvetica;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+span {
+    font-family: Helvetica;
+    font-weight: bold;
+    color: blue
+}
+#brushes {
+     background-color: mediumspringgreen;
+}
+#frames {
+     background-color: lightcoral;
+}
+#paint {
+     background-color: skyblue;
+}
+p {
+     font-family: Helvetica;
+}
