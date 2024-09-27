@@ -1,0 +1,31 @@
+let input = 'Belive in yourself';
+const vowel = ['a', 'e', 'i', 'o', 'u'];
+let resultArray = [];
+//let inputLength = input.length;
+for (let j = 0; j < input.length; j++) {
+  //console.log(j);
+  for (let k = 0; k < vowel.length; k++) {
+    //console.log(k);
+    if (input[j] === vowel[k]) {
+      resultArray.push(vowel[k]);
+      //console.log(resultArray);
+    }   
+  }
+   if (input[j] === 'e') {
+      resultArray.push(input[j]);
+      //console.log(resultArray);
+    }
+     if (input[j] === 'u') {
+      resultArray.push(input[j]);
+      //console.log(resultArray);
+    }
+}
+
+//console.log(resultArray.join('').toUpperCase());
+
+const result = resultArray.join('').toUpperCase();
+
+console.log(`The phrase, '${input}' is '${result}' in Whale talk.`);
+
+//output
+The phrase, 'Belive in yourself' is 'EEIEEIOUUEE' in Whale talk.
